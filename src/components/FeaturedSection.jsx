@@ -44,7 +44,7 @@ const animalData=[
 ]
 const FeaturedSection = () => {
     return (<div className='mt-10  shadow-sm'> <h1 className='font-bold text-4xl p-3 text-center text-green-600 mb-5'>Featured Animal</h1>
-        <div className='grid grid-cols-2 lg:grid-cols-4 gap-3 my-10  shadow-sm'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 my-10  shadow-sm'>
            
            {
             animalData.map((animal)=><div key={animal.id} className="card bg-base-100 shadow-sm">

@@ -39,7 +39,7 @@ const top=[
   }
 ]
 const TopBreedSection = () => {
-    return (<div><h1 className='font-bold text-center text-4xl my-10 text-green-600'>Top Breed Animal</h1><div className='grid grid-cols-4 gap-3 mt-10'>
+    return (<div className='my-10'><h1 className='font-bold text-center text-4xl my-10 text-green-600'>Top Breed Animal</h1><div className='grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-10'>
             {
                 top.map((topper,ind)=><div key={ind}className="card bg-base-100 shadow-sm">
   <figure>

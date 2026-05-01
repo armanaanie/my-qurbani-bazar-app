@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
+        <footer className="footer footer-horizontal footer-center bg-green-600 text-white rounded p-10">
   <nav className="grid grid-flow-col gap-4">
     <Link className="link link-hover" href="/about">About us</Link>
     <a className="link link-hover" href="/contact">Contact</a>

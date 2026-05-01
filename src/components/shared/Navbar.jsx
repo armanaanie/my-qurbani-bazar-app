@@ -2,12 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.png"
 import avatar from "@/assets/user.png"
+import Navlink from "./Navlink";
 const Navbar = () => {
     const links= 
-    <><li><Link href="/">Home</Link></li>
-    <li><Link href="/allAnimals">All Animals</Link></li> </>   
+    <><li><Navlink href="/">Home</Navlink></li>
+    <li><Navlink href="/allAnimals">All Animals</Navlink></li> </>   
     return (
-       <div className="navbar bg-base-100 shadow-sm">
+       <div className=" navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
