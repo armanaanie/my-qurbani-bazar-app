@@ -42,7 +42,7 @@ const Testimonials = () => {
     <div className="my-20">
 
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-4xl font-bold text-green-600">
           Customer Testimonials
         </h1>
 
@@ -56,7 +56,7 @@ const Testimonials = () => {
         {testimonials.map((item) => (
           <div
             key={item.id}
-            className="card bg-base-100 shadow-xl p-5"
+            className="card bg-base-100 shadow-sm p-5"
           >
 
             <div className="flex items-center  gap-4 mb-4">
@@ -81,17 +81,17 @@ const Testimonials = () => {
               </div>
 
             </div>
-
+        <div className="h-32">
             <p className="text-gray-600">
               “{item.review}”
-            </p>
+            </p></div>
 
            <div><div className="rating">
-  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="2 star" defaultChecked />
-  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-green-600" aria-label="1 star" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-green-600" aria-label="2 star" defaultChecked />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-green-600" aria-label="3 star" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-green-600" aria-label="4 star" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-green-600" aria-label="5 star" />
 </div></div>
 
           </div>
