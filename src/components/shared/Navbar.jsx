@@ -39,8 +39,8 @@ const router= useRouter();
     <Link href='/myProfile'><Image src={user?.image || avatar} alt="avatar" className="rounded-full bg-green-600 p-1 h-[40] w-[40]" height={50} width={70}></Image></Link>
    <button className="btn btn-primary"  onClick={async()=>{
     await authClient.signOut();router.push("/signin")}}>Sign out</button>
-   <Link className="btn btn-outline" href="/Register">Register</Link>
-  </div>:<Link className="btn btn-primary" href="/signin">Sign in</Link>}
+   
+  </div>:<><Link className="btn btn-primary" href="/signin">Sign in</Link><Link className="btn btn-outline" href="/Register">Register</Link></>}
   
 </div>
     );
