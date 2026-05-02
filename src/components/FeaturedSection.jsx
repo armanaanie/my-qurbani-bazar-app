@@ -49,7 +49,7 @@ const FeaturedSection = () => {
            {
             animalData.map((animal)=><div key={animal.id} className="card bg-base-100 shadow-sm">
 
-   <Image src={animal.photo} alt='animal-pic' width={300} height={100} className='h-50'></Image>
+   <Image src={animal.photo} alt='animal-pic' width={300} height={100} className='h-48'></Image>
  
   <div className="card-body">
      <div className="badge badge-secondary">{animal.badge}</div>

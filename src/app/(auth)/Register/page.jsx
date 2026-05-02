@@ -24,7 +24,7 @@ const RegisterPage =() => {
     email: email,
     password: password,
     image: image,
-    callbackURL: "/",
+    callbackURL: "/signin",
      rememberMe: true, 
 });
 console.log(res,"data res",error,"error");
@@ -33,7 +33,7 @@ if(error){
 }
 if(res){
     toast.success("Register successfully!");
-    router.push("/");
+    router.push("/signin");
 }
     }
     return (
