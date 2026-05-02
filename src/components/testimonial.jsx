@@ -51,7 +51,7 @@ const Testimonials = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 place-items-center md:grid-cols-4 gap-6">
 
         {testimonials.map((item) => (
           <div
