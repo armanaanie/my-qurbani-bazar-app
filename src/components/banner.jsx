@@ -1,8 +1,11 @@
+
 import React from 'react';
 import banner from '@/assets/banner.png'
 
 import Link from 'next/link';
+
 const Banner = () => {
+  
     return (
         <div
   className="hero min-h-screen"

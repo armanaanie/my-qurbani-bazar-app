@@ -1,17 +1,40 @@
 "use client"
+import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import { useForm } from "react-hook-form"
-const RegisterPage = () => {
+import { FaEye, FaEyeSlash } from 'react-icons/fa6';
+import { toast } from 'react-toastify';
+const RegisterPage =() => {
     const {
     register,
     handleSubmit,
     
     formState: { errors },
-  } = useForm()
-  
-    const handleRegisterFunc =(data)=>{
-        console.log(data)
- 
+  } = useForm();
+  const router= useRouter();
+   const [isShowPassword,setIsShowPassword]= useState(false);
+    const handleRegisterFunc = async(data)=>{
+        console.log(data);
+        const {name,email,password,image}=data;
+        console.log(name,email,image)
+ const { data:res,error} = await authClient.signUp.email({
+    name: name,
+    email: email,
+    password: password,
+    image: image,
+    callbackURL: "/",
+     rememberMe: true, 
+});
+console.log(res,"data res",error,"error");
+if(error){
+    toast.error(error.message);
+}
+if(res){
+    toast.success("Register successfully!");
+    router.push("/");
+}
     }
     return (
         <div>
@@ -27,12 +50,15 @@ const RegisterPage = () => {
     {errors.email && <span className='text-red-600'>This field is required</span>}
 
    <label className="label">Photo Url</label>
-  <input type="text" className="input" placeholder="Enter your Photo Url" />
+  <input type="text" className="input" placeholder="Enter your Photo Url" {...register("image",{ required: true })}/>
+   {errors.image && <span className='text-red-600'>This field is required</span>}
  
 
   <label className="label">Password</label>
-  <input type="password" className="input" placeholder="Password" {...register("password",{ required: true })} />
- {errors.password && <span className='text-red-600'>This field is required</span>}
+  <div className='flex justify-between items-center'><input type={isShowPassword?"text":"password"} className="input" placeholder="Password" {...register("password",{ required: true })} />
+  
+  <button className='btn border border-gray-300 ' onClick={()=>setIsShowPassword(!isShowPassword)}>{isShowPassword?<FaEye />:<FaEyeSlash />}</button></div>
+   {errors.password && <span className='text-red-600'>This field is required</span>}
   <button className="btn btn-neutral mt-4" type='submit'>Register</button>
 </fieldset></form>
 
