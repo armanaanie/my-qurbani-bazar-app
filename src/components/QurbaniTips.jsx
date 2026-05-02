@@ -36,7 +36,7 @@ const tips=[
 
 const QurbaniTips = () => {
     return (
-        <div className="flex justify-between gap-4">
+        <div className="flex justify-between gap-4 bg-green-50">
              <button className="btn bg-green-600 text-white ">Qurbani Tips : </button>
           <Marquee>
            
