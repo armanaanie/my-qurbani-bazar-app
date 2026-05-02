@@ -58,7 +58,7 @@ const FeaturedSection = () => {
      
     </h2>
     <p>Location:<span className='font-semibold'>{animal.location}</span></p>
-     <p>Price:<span className='font-semibold'>{animal.price}</span></p>
+     <p>Price:<span className='font-semibold'>{animal.price} Taka</span></p>
     <div className="card-actions">
       <div className="badge badge-outline">{animal.quality}</div>
       <div className="badge badge-outline">{animal.price} taka</div>
