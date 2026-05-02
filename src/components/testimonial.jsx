@@ -7,7 +7,7 @@ const testimonials = [
     location: "Dhaka",
     review:
       "Very healthy animals and excellent delivery service. Highly recommended!",
-    image: "https://i.ibb.co.com/8DPL7Qf/user.png",
+    image: "https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 
   {
@@ -16,7 +16,7 @@ const testimonials = [
     location: "Chattogram",
     review:
       "The buying process was smooth and easy. Loved the service.",
-    image: "https://i.ibb.co.com/8DPL7Qf/user.png",
+    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 
   {
@@ -25,7 +25,7 @@ const testimonials = [
     location: "Sylhet",
     review:
       "Affordable prices and quality animals. Will buy again next Eid.",
-    image: "https://i.ibb.co.com/8DPL7Qf/user.png",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const testimonials = [
     location: "Chattagram",
     review:
       "Smooth delivery process.I was in peace beacause i was sure that they would do there best ",
-    image: "https://i.ibb.co.com/8DPL7Qf/user.png",
+    image: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -59,14 +59,15 @@ const Testimonials = () => {
             className="card bg-base-100 shadow-xl p-5"
           >
 
-            <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center  gap-4 mb-4">
 
               <Image
                 src={item.image}
                 alt="user"
                 width={60}
                 height={60}
-                className="rounded-full"
+                className="rounded-full h-17"
+
               />
 
               <div>
@@ -85,14 +86,13 @@ const Testimonials = () => {
               “{item.review}”
             </p>
 
-            <div className="rating mt-4">
-              <input
-                type="radio"
-                className="mask mask-star-2 bg-orange-400"
-                checked
-                readOnly
-              />
-            </div>
+           <div><div className="rating">
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="2 star" defaultChecked />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="3 star" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="4 star" />
+  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+</div></div>
 
           </div>
         ))}
